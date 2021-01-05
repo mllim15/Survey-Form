@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hackathon Survey Form</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
 
-  <!--fonts-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hackathon Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -20,9 +19,9 @@
 
     <!--US#2: short explanation with id="description"-->
     <p id="description"><em>Thank you for participating in this Hackathon.<br>
-    We appreciate your feedback.</em></p>
+        We appreciate your feedback.</em></p>
   </div>
-  
+
   <div id="form">
     <!--US#3: form with id="survey-form"-->
     <form id="survey-form">
@@ -66,23 +65,23 @@
         </select>
         <br>
       </div>
-      
+
       <div class="form-field">
         <p>Please select a shirt size for your free shirt.</p>
         <!--US#13: radio buttons grouped using name attribute [shirtSize]-->
-        <label>
+        <label class="shirt-radios">
           <input required checked name="shirtSize" value="xs" type="radio">Unisex XS</input>
         </label>
-        <label>
+        <label class="shirt-radios">
           <input name="shirtSize" value="s" type="radio">Unisex S</input>
         </label>
-        <label>
+        <label class="shirt-radios">
           <input name="shirtSize" value="m" type="radio">Unisex M</input>
         </label>
-        <label>
+        <label class="shirt-radios">
           <input name="shirtSize" value="l" type="radio">Unisex L</input>
         </label>
-      <label>
+        <label class="shirt-radios">
           <input name="shirtSize" value="xl" type="radio">Unisex XL</input>
         </label>
         <br>
@@ -91,19 +90,19 @@
       <div class="form-field">
         <p>How did you hear about this hackathon? Please check all that apply.</p>
         <!--US#14: checkboxes that each have a value attribute-->
-        <label>
+        <label class="discover-checkboxes">
           <input name="discover" value="facebook" type="checkbox">Facebook</input>
         </label>
-        <label>
+        <label class="discover-checkboxes">
           <input name="discover" value="instagram" type="checkbox">Instagram</input>
         </label>
-        <label>
+        <label class="discover-checkboxes">
           <input name="discover" value="website" type="checkbox">Hackathon website</input>
         </label>
-        <label>
+        <label class="discover-checkboxes">
           <input name="discover" value="email" type="checkbox">Email</input>
         </label>
-        <label>
+        <label class="discover-checkboxes">
           <input name="discover" value="other" type="checkbox">Other</input>
         </label>
         <br>
@@ -121,4 +120,5 @@
     </form>
   </div>
 </body>
+
 </html>
