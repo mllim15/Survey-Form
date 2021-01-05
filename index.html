@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+  <!--This is the FreeCodeCamp CDN link to run tests for the user stories-->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <div id="heading">
+    <!--US#1: title with id="title" h1 sized-->
+    <h1 id="title">Hackathon Survey</h1>
+
+    <!--US#2: short explanation with id="description"-->
+    <p id="description"><em>Thank you for participating in this Hackathon.<br>
+    We appreciate your feedback.</em></p>
+  </div>
+  
+  <div id="form">
+    <!--US#3: form with id="survey-form"-->
+    <form id="survey-form">
+      <div class="form-field">
+        <!--US#10: corresponding name label; id="name-label"-->
+        <label for="name" id="name-label">Name</label>
+        <!--US#4: required name field with id="name"-->
+        <!--US#11: placeholder text for name field-->
+        <input required id="name" type="text" placeholder="Enter full name">
+        <br>
+      </div>
+
+      <div class="form-field">
+        <!--US#10: corresponding email label; id="email-label"-->
+        <label for="email" id="email-label">Email</label>
+        <!--US#5: required email field with id="email"-->
+        <!--US#6: validation error for incorrectly formatted emails [type="email"]-->
+        <!--US#11: placeholder text for email field-->
+        <input required id="email" type="email" placeholder="Enter email">
+        <br>
+      </div>
+
+      <div class="form-field">
+        <!--US#10: corresponding number label; id="number-label"-->
+        <label for="number" id="number-label">Age</label>
+        <!--US#7: number field with id="number"-->
+        <!--US#8: validation error for non-numbers [type="number"]-->
+        <!--US#9: validation error for numbers outside the range [min/max]-->
+        <!--US#11: placeholder text for number field-->
+        <input required id="number" type="number" placeholder="Select age" min="18" max="120">
+        <br>
+      </div>
+
+      <div class="form-field">
+        <label for="dropdown" id="dropdown-label">Is this your first hackathon?</label>
+        <!--US#12: dropdown list with id="dropdown"-->
+        <select required id="dropdown" name="attended">
+          <option disabled selected value>Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <br>
+      </div>
+      
+      <div class="form-field">
+        <p>Please select a shirt size for your free shirt.</p>
+        <!--US#13: radio buttons grouped using name attribute [shirtSize]-->
+        <label>
+          <input required checked name="shirtSize" value="xs" type="radio">Unisex XS</input>
+        </label>
+        <label>
+          <input name="shirtSize" value="s" type="radio">Unisex S</input>
+        </label>
+        <label>
+          <input name="shirtSize" value="m" type="radio">Unisex M</input>
+        </label>
+        <label>
+          <input name="shirtSize" value="l" type="radio">Unisex L</input>
+        </label>
+      <label>
+          <input name="shirtSize" value="xl" type="radio">Unisex XL</input>
+        </label>
+        <br>
+      </div>
+
+      <div class="form-field">
+        <p>How did you hear about this hackathon? Please check all that apply.</p>
+        <!--US#14: checkboxes that each have a value attribute-->
+        <label>
+          <input name="discover" value="facebook" type="checkbox">Facebook</input>
+        </label>
+        <label>
+          <input name="discover" value="instagram" type="checkbox">Instagram</input>
+        </label>
+        <label>
+          <input name="discover" value="website" type="checkbox">Hackathon website</input>
+        </label>
+        <label>
+          <input name="discover" value="email" type="checkbox">Email</input>
+        </label>
+        <label>
+          <input name="discover" value="other" type="checkbox">Other</input>
+        </label>
+        <br>
+      </div>
+
+      <div class="form-field">
+        <p>Do you have any comments or suggestions to help us improve?</p>
+        <!--US#15: textarea for additional comments-->
+        <textarea required id="suggestions" placeholder="Enter comments and/or suggestions here"></textarea>
+        <br>
+      </div>
+
+      <!--US#16: button to submit all inputs with id="submit"-->
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
